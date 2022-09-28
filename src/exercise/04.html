@@ -23,7 +23,7 @@
         console.log({props, propsName, componentName});
         const type = typeof props[propsName]
         if( type !== "string") {
-          return new Error(`The ${componentName} `)
+          return new Error(`The Component ${componentName} needs a prop of type ${propsName} but insted  `)
         }
       }
     }
