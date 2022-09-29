@@ -7,7 +7,7 @@ function UsernameForm({onSubmitUsername}) {
   function handleSubmit(event) {
     event.preventDefault()
     onSubmitUsername(event.target.elements.usernameInput.value)
-  }
+  } 
 
   return (
     <form onSubmit={handleSubmit}>

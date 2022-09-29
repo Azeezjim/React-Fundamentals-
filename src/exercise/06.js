@@ -21,15 +21,14 @@ function UsernameForm({onSubmitUsername}) {
   // to do so, set the value of 'htmlFor' prop of the label to the id of input
   function handleSubmit({event}) {
       event.preventDefault()
-      onSubmitUsername(event.target.elements.username.value)
-
+      onSubmitUsername(event.target.elements.userNameInput.value)
   } 
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor='userName'>Username:</label>
-        <input id='userName' type="text" />
+        <label htmlFor='userNameInput'>Username:</label>
+        <input id='userNameInput' type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>
