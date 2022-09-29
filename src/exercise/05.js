@@ -16,24 +16,24 @@ import '../box-styles.css'
 
 function Box({style, size, className = '', ...restProps}) {
   const sizeClassName = size ? `box--${size}` : '';
-  return <dev clas sName={`box ${className} `}
+  return <dev className={`box ${className} ${sizeClassName} `}
   style={{backgroundColor: 'blue', fontStyle: 'italic', ...style}}
-  // {...restProps}
+  {...restProps}
   />
 }
 
 const smallBox = (
-  <Box className="box--small" style={{backgroundColor: 'blue'}}>
+  <Box size="small" style={{backgroundColor: 'blue'}}>
     small lightblue box
   </Box>
 )
 const mediumBox = (
-  <Box className="box--medium" style={{backgroundColor: 'gray'}}>
+  <Box size="medium" style={{backgroundColor: 'gray'}}>
     medium pink box
   </Box>
 )
 const largeBox = (
-  <Box className="box--large" style={{backgroundColor: 'red'}}>
+  <Box size="large" style={{backgroundColor: 'red'}}>
     large orange box
   </Box>
 )
