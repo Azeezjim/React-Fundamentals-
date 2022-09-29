@@ -23,13 +23,13 @@
         console.log({props, propsName, componentName});
         const type = typeof props[propsName]
         if( type !== "string") {
-          return new Error(`The Component ${componentName} needs a prop of type ${propsName} but insted  `)
+          return new Error(`The Component ${componentName} needs a prop of type ${propsName} needs to be a type of "string but insted reurrnd ${type}"  `)
         }
       }
     }
     const element = (
       <div className="container">
-        <Message children = "Hello Azeezjim" age={24}/>
+        <Message children = "Hello Azeezjim" age='azeez'/>
         <Message>Goodbye World</Message>
       </div>
     )
