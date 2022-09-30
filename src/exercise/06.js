@@ -24,19 +24,18 @@ function UsernameForm({onSubmitUsername}) {
 
   const [uname, setUname] = React.useState('')
     function handleChange (event) {
-      const value = event.target.value
-      setUname(value.toLowerCase())
+      const value = event.target.value.toLowerCase()
+      setUname(value)
       // event.target.value = value.toLowerCase()
       // const isLowerCase = value = value.toLowerCase()
       // setError(isLowerCase ? "" :  'Username must be lower case')
   }
 
-
   const uninput = React.useRef()
   function handleSubmit(event) {
       event.preventDefault()
       // unameRef.current.focus();
-      onSubmitUsername(uninput.current.value)
+      onSubmitUsername(uname)
       console.log(event)
   } 
 
